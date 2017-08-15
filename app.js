@@ -2,7 +2,7 @@ var http = require("http");
 var url = require("url");
 var config = require("./config").config;
 
-var port = 8124;
+var port = process.env.PORT || 8124;
 
 function start() {
     function onRequest(request, response) {
