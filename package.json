@@ -1,0 +1,16 @@
+{
+  "name": "chaos-http",
+  "version": "1.0.0",
+  "description": "HTTP echo back service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johnny Wey",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}
