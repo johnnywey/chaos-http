@@ -49,7 +49,7 @@ function start() {
         });
     }
 
-    http.createServer(onRequest).listen(port, "127.0.0.1", () => {
+    http.createServer(onRequest).listen(port, () => {
         console.log("Server has started.");
     });
 }
