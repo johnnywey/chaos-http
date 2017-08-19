@@ -25,6 +25,16 @@ Settings.Chaos = [
             response.end();
         }
     },
+    {
+        name:"AccessDenied",
+        path:"/accessdenied",
+        action:function (response) {
+            console.log("=========== " + this.name + " ===========");
+            console.log("Performing simulated 403");
+            response.writeHead(403);
+            response.end();
+        }
+    },
 		{
         name:"RandomFailure",
         path:"/randomfailure",
