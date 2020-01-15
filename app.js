@@ -51,6 +51,11 @@ function start() {
 
     http.createServer(onRequest).listen(port, () => {
         console.log("Server has started.");
+        console.log("Listening on port [" + port + "]");
+        console.log("Available endpoints are:");
+        for (var i = 0; i < config.Chaos.length; i++) {
+            console.log("\t" + config.Chaos[i].name + ": " + config.Chaos[i].path);
+        }
     });
 }
 
