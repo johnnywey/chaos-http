@@ -19,9 +19,14 @@ function start() {
         }
 
         request.on('end', function () {
+            var pathToCheck = pathName.toLocaleLowerCase()
+            if (pathToCheck.indexOf("/") >= 0) {
+                pathToCheck = "/" + pathToCheck.split("/")[1]
+            }
+            console.log("** Incoming request for [" + pathToCheck + "]");
             var chaos = null;
             for (var i = 0; i < config.Chaos.length; i++) {
-                if (pathName.toLocaleLowerCase() === config.Chaos[i].path.toLocaleLowerCase()) {
+                if (pathToCheck === config.Chaos[i].path.toLocaleLowerCase()) {
                     console.log("Found match in chaos settings for request path [" + pathName + "] | [" + config.Chaos[i].path + "]");
                     chaos = config.Chaos[i];
                     break;
